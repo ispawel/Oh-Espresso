@@ -1,21 +1,22 @@
 //
-//  LoginViewController.swift
+//  EspressoViewController.swift
 //  oh!Espresso
 //
-//  Created by Pavel Isakov on 17.04.2023.
+//  Created by Pavel Isakov on 07.03.2023.
 //
 
 import UIKit
-import Stevia
 
-class LoginViewController: UIViewController {
+class EspressoViewController: UIViewController {
 
-    var didSendEventClosure: ((LoginViewController.Event) -> Void)?
+    var didSendEventClosure: ((EspressoViewController.Event) -> Void)?
 
+    
     //MARK: -
     
-    private let loginTF: UITextField = {
+    private let coffeValueTF: UITextField = {
         let textField = UITextField()
+        textField.placeholder("qwe")
         textField.backgroundColor = .systemBlue
         textField.width(200)
         textField.height(30)
@@ -32,7 +33,7 @@ class LoginViewController: UIViewController {
         return textField
     }()
     
-    private let loginButton: UIButton = {
+    private let calcButton: UIButton = {
         let button = UIButton()
         button.setTitle("Login", for: .normal)
         button.backgroundColor = .systemBlue
@@ -58,37 +59,31 @@ class LoginViewController: UIViewController {
         // Setup
         view.backgroundColor = UIColor(red:22/255.0, green:62/255.0, blue:47/255.0, alpha:0.6)
         //vStackView.backgroundColor = UIColor(red:22/255.0, green:62/255.0, blue:47/255.0, alpha:1.0)
-        loginTF.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:1.0)
-        passwordTF.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:1.0)
-        loginButton.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:0.8)
+       // loginTF.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:1.0)
+       // passwordTF.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:1.0)
+      //  latteButton.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:0.8)
         
         // Subviews
         view.subviews(vStackView)
-        vStackView.addArrangedSubview(loginTF)
-        vStackView.addArrangedSubview(passwordTF)
-        vStackView.addArrangedSubview(loginButton)
+        //vStackView.addArrangedSubview(loginTF)
+        //vStackView.addArrangedSubview(passwordTF)
+        //vStackView.addArrangedSubview(latteButton)
 
         // layout
         vStackView.fillVertically(padding: 360)
         vStackView.fillHorizontally(padding: 100)
         
         
-        
-        
-        loginButton.addTarget(self, action: #selector(didTapLoginButton(_:)), for: .touchUpInside)
+        calcButton.addTarget(self, action: #selector(didTapCalcButton(_:)), for: .touchUpInside)
     }
-    
-//    deinit {
-//        print("LoginViewController deinit")
-//    }
 
-    @objc private func didTapLoginButton(_ sender: Any) {
-        didSendEventClosure?(.login)
+    @objc private func didTapCalcButton(_ sender: Any) {
+        didSendEventClosure?(.espresso)
     }
 }
 
-extension LoginViewController {
+extension EspressoViewController {
     enum Event {
-        case login
+        case espresso
     }
 }

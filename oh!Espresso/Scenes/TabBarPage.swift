@@ -8,18 +8,18 @@
 import Foundation
 
 enum TabBarPage {
-    case start
-    case enterValue
-    case instruction
+    case espresso
+    case latte
+    case raf
 
     init?(index: Int) {
         switch index {
         case 0:
-            self = .start
+            self = .espresso
         case 1:
-            self = .enterValue
+            self = .latte
         case 2:
-            self = .instruction
+            self = .raf
         default:
             return nil
         }
@@ -27,29 +27,24 @@ enum TabBarPage {
     
     func pageTitleValue() -> String {
         switch self {
-        case .start:
-            return "Start"
-        case .enterValue:
-            return "EnterValue"
-        case .instruction:
-            return "Instruction"
+        case .espresso:
+            return "Espresso"
+        case .latte:
+            return "Latte"
+        case .raf:
+            return "Raf"
         }
     }
 
     func pageOrderNumber() -> Int {
         switch self {
-        case .start:
+        case .espresso:
             return 0
-        case .enterValue:
+        case .latte:
             return 1
-        case .instruction:
+        case .raf:
             return 2
         }
     }
 
-    // Add tab icon value
-    
-    // Add tab icon selected / deselected color
-    
-    // etc
 }

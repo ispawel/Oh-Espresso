@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: - Coordinator
-protocol Coordinator: class {
+protocol Coordinator: AnyObject {
     var finishDelegate: CoordinatorFinishDelegate? { get set }
     
     // Each coordinator has one navigation controller assigned to it.
@@ -39,7 +39,7 @@ extension Coordinator {
 // MARK: - CoordinatorOutput
 
 /// Delegate protocol helping parent Coordinator know when its child is ready to be finished.
-protocol CoordinatorFinishDelegate: class {
+protocol CoordinatorFinishDelegate: AnyObject {
     func coordinatorDidFinish(childCoordinator: Coordinator)
 }
 

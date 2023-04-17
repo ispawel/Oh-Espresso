@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-protocol StartCoordinatorProtocol: Coordinator {
-    func showStartViewController()
+protocol EspressoCoordinatorProtocol: Coordinator {
+    func showEspressoViewController()
 }
 
-class StartCoordinator: StartCoordinatorProtocol {
+class EspressoCoordinator: EspressoCoordinatorProtocol {
     
     weak var finishDelegate: CoordinatorFinishDelegate?
     var navigationController: UINavigationController
@@ -25,19 +25,15 @@ class StartCoordinator: StartCoordinatorProtocol {
     }
         
     func start() {
-        showStartViewController()
+        showEspressoViewController()
     }
     
-    deinit {
-        print("LoginCoordinator deinit")
-    }
-    
-    func showStartViewController() {
-        let startVC: StartViewController = .init()
-        startVC.didSendEventClosure = { [weak self] event in
+    func showEspressoViewController() {
+        let espressoVC: EspressoViewController = .init()
+        espressoVC.didSendEventClosure = { [weak self] event in
             self?.finish()
         }
-        navigationController.pushViewController(startVC, animated: true)
+        navigationController.pushViewController(espressoVC, animated: true)
     }
 }
 

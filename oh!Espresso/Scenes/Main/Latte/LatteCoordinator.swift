@@ -1,5 +1,5 @@
 //
-//  EnterValueCoordinator.swift
+//  LatteCoordinator.swift
 //  oh!Espresso
 //
 //  Created by Pavel Isakov on 12.04.2023.
@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-protocol EnterValueCoordinatorProtocol: Coordinator {
-    func showEnterValueViewController()
+protocol LatteCoordinatorProtocol: Coordinator {
+    func showLatteViewController()
 }
 
-class EnterValueCoordinator: EnterValueCoordinatorProtocol {
+class LatteCoordinator: LatteCoordinatorProtocol {
     
     weak var finishDelegate: CoordinatorFinishDelegate?
     var navigationController: UINavigationController
@@ -25,18 +25,18 @@ class EnterValueCoordinator: EnterValueCoordinatorProtocol {
     }
         
     func start() {
-        showEnterValueViewController()
+        showLatteViewController()
     }
     
     deinit {
-        print("LoginCoordinator deinit")
+        print("Latte Coordinator deinit")
     }
     
-    func showEnterValueViewController() {
-        let enterValueVC: EnterValueViewController = .init()
-        enterValueVC.didSendEventClosure = { [weak self] event in
+    func showLatteViewController() {
+        let latteVC: LatteViewController = .init()
+        latteVC.didSendEventClosure = { [weak self] event in
             self?.finish()
         }
-        navigationController.pushViewController(enterValueVC, animated: true)
+        navigationController.pushViewController(latteVC, animated: true)
     }
 }
