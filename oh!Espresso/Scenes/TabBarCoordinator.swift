@@ -29,6 +29,7 @@ class TabCoordinator: NSObject, Coordinator {
         self.tabBarController = .init()
     }
     
+    
     func start() {
         // Let's define which pages do we want to add into tab bar
         let pages: [TabBarPage] = [.instruction, .enterValue, .start]

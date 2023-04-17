@@ -29,6 +29,7 @@
 		E23265A629ED667700BB1CA1 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23265A229ED667700BB1CA1 /* StartCoordinator.swift */; };
 		E23265A729ED667700BB1CA1 /* StartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23265A329ED667700BB1CA1 /* StartPageView.swift */; };
 		E23265A829ED667700BB1CA1 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23265A429ED667700BB1CA1 /* StartPageViewController.swift */; };
+		E23265AC29ED83AF00BB1CA1 /* UIColor+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23265AB29ED83AF00BB1CA1 /* UIColor+Font.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		E23265A229ED667700BB1CA1 /* StartCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
 		E23265A329ED667700BB1CA1 /* StartPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageView.swift; sourceTree = "<group>"; };
 		E23265A429ED667700BB1CA1 /* StartPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
+		E23265AB29ED83AF00BB1CA1 /* UIColor+Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Font.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +88,6 @@
 				84F84EF178CB774043C566EB /* Pods-oh!Espresso.debug.xcconfig */,
 				CA44850071A2C303B29FC313 /* Pods-oh!Espresso.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -111,6 +112,7 @@
 		E232650F29ED5D8100BB1CA1 /* oh!Espresso */ = {
 			isa = PBXGroup;
 			children = (
+				E23265AA29ED838D00BB1CA1 /* Appearance */,
 				E232654929ED5F3A00BB1CA1 /* Application */,
 				E232657629ED623A00BB1CA1 /* Scenes */,
 				E232651929ED5D8200BB1CA1 /* Assets.xcassets */,
@@ -192,6 +194,14 @@
 				E23265A129ED667700BB1CA1 /* StartPageViewModel.swift */,
 			);
 			path = Start;
+			sourceTree = "<group>";
+		};
+		E23265AA29ED838D00BB1CA1 /* Appearance */ = {
+			isa = PBXGroup;
+			children = (
+				E23265AB29ED83AF00BB1CA1 /* UIColor+Font.swift */,
+			);
+			path = Appearance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +326,7 @@
 				E232659D29ED648000BB1CA1 /* Coordinator.swift in Sources */,
 				E232659929ED623A00BB1CA1 /* InstructionPageViewModel.swift in Sources */,
 				E232658D29ED623A00BB1CA1 /* TabBarPage.swift in Sources */,
+				E23265AC29ED83AF00BB1CA1 /* UIColor+Font.swift in Sources */,
 				E232652529ED5E8F00BB1CA1 /* AppCoordinator.swift in Sources */,
 				E232651129ED5D8100BB1CA1 /* AppDelegate.swift in Sources */,
 				E232659429ED623A00BB1CA1 /* EnterValuePageViewModel.swift in Sources */,

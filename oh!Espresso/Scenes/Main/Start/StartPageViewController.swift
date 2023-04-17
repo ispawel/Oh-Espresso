@@ -11,37 +11,67 @@ class StartViewController: UIViewController {
 
     var didSendEventClosure: ((StartViewController.Event) -> Void)?
 
-    private let enterValueButton: UIButton = {
+    //MARK: -
+    
+    private let loginTF: UITextField = {
+        let textField = UITextField()
+        textField.backgroundColor = .systemBlue
+        textField.width(200)
+        textField.height(30)
+        textField.layer.cornerRadius = 10
+        return textField
+    }()
+    
+    private let passwordTF: UITextField = {
+        let textField = UITextField()
+        textField.backgroundColor = .systemBlue
+        textField.width(200)
+        textField.height(30)
+        textField.layer.cornerRadius = 10
+        return textField
+    }()
+    
+    private let loginButton: UIButton = {
         let button = UIButton()
-        button.setTitle("To enter Value", for: .normal)
+        button.setTitle("Login", for: .normal)
         button.backgroundColor = .systemBlue
         button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 8.0
-        
+        button.layer.cornerRadius = 10
+        button.width(200)
+        button.height(35)
         return button
+    }()
+    
+    //MARK: - Containers
+    private let vStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.alignment = .center
+        stackView.distribution = .equalSpacing
+        return stackView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .white
         
-        view.addSubview(enterValueButton)
+        // Setup
+        view.backgroundColor = UIColor(red:22/255.0, green:62/255.0, blue:47/255.0, alpha:0.6)
+        //vStackView.backgroundColor = UIColor(red:22/255.0, green:62/255.0, blue:47/255.0, alpha:1.0)
+        loginTF.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:1.0)
+        passwordTF.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:1.0)
+        loginButton.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:0.8)
+        
+        // Subviews
+        view.subviews(vStackView)
+        vStackView.addArrangedSubview(loginTF)
+        vStackView.addArrangedSubview(passwordTF)
+        vStackView.addArrangedSubview(loginButton)
 
-        enterValueButton.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            enterValueButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            enterValueButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            enterValueButton.widthAnchor.constraint(equalToConstant: 200),
-            enterValueButton.heightAnchor.constraint(equalToConstant: 50)
-        ])
+        // layout
+        vStackView.fillVertically(padding: 360)
+        vStackView.fillHorizontally(padding: 100)
         
         enterValueButton.addTarget(self, action: #selector(didTapToEnterValueButton(_:)), for: .touchUpInside)
-    }
-    
-    deinit {
-        print("StartViewController deinit")
     }
 
     @objc private func didTapToEnterValueButton(_ sender: Any) {

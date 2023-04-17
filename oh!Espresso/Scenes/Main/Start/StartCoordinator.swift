@@ -28,10 +28,6 @@ class StartCoordinator: StartCoordinatorProtocol {
         showStartViewController()
     }
     
-    deinit {
-        print("LoginCoordinator deinit")
-    }
-    
     func showStartViewController() {
         let startVC: StartViewController = .init()
         startVC.didSendEventClosure = { [weak self] event in
