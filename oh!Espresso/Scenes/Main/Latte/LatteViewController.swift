@@ -1,20 +1,23 @@
 //
-//  EnterValueViewController.swift
+//  LatteViewController.swift
 //  oh!Espresso
 //
 //  Created by Pavel Isakov on 10.04.2023.
 //
 
 import UIKit
+import Stevia
 
-class EnterValueViewController: UIViewController {
+class LatteViewController: UIViewController {
 
-    var didSendEventClosure: ((EnterValueViewController.Event) -> Void)?
+    var didSendEventClosure: ((LatteViewController.Event) -> Void)?
 
+    
     //MARK: -
     
     private let coffeTF: UITextField = {
         let textField = UITextField()
+        textField.placeholder("Value coffe")
         textField.backgroundColor = .systemBlue
         textField.width(200)
         textField.height(30)
@@ -56,33 +59,33 @@ class EnterValueViewController: UIViewController {
         // Setup
         view.backgroundColor = UIColor(red:22/255.0, green:62/255.0, blue:47/255.0, alpha:0.6)
         //vStackView.backgroundColor = UIColor(red:22/255.0, green:62/255.0, blue:47/255.0, alpha:1.0)
-        loginTF.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:1.0)
-        passwordTF.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:1.0)
-        loginButton.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:0.8)
+       // loginTF.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:1.0)
+       // passwordTF.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:1.0)
+       // loginButton.backgroundColor = UIColor(red:115/255.0, green:117/255.0, blue:117/255.0, alpha:0.8)
         
         // Subviews
         view.subviews(vStackView)
-        vStackView.addArrangedSubview(loginTF)
-        vStackView.addArrangedSubview(passwordTF)
-        vStackView.addArrangedSubview(loginButton)
+        //vStackView.addArrangedSubview(coffeTF)
+        //vStackView.addArrangedSubview(passwordTF)
+        //vStackView.addArrangedSubview(loginButton)
 
         // layout
         vStackView.fillVertically(padding: 360)
         vStackView.fillHorizontally(padding: 100)
-        toInstructionButton.addTarget(self, action: #selector(didTapToInstructionButton(_:)), for: .touchUpInside)
+        // toInstructionButton.addTarget(self, action: #selector(didTapToInstructionButton(_:)), for: .touchUpInside)
     }
     
     deinit {
-        print("LoginViewController deinit")
+        print("LatteViewController deinit")
     }
 
     @objc private func didTapToInstructionButton(_ sender: Any) {
-        didSendEventClosure?(.enterValue)
+        didSendEventClosure?(.latte)
     }
 }
 
-extension EnterValueViewController {
+extension LatteViewController {
     enum Event {
-        case enterValue
+        case latte
     }
 }

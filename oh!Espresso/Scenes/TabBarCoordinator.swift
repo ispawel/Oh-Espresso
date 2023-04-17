@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TabCoordinatorProtocol: Coordinator {
-    
+
     var tabBarController: UITabBarController { get set }
     
     func selectPage(_ page: TabBarPage)
@@ -32,7 +32,7 @@ class TabCoordinator: NSObject, Coordinator {
     
     func start() {
         // Let's define which pages do we want to add into tab bar
-        let pages: [TabBarPage] = [.instruction, .enterValue, .start]
+        let pages: [TabBarPage] = [.raf, .latte, .espresso]
             .sorted(by: { $0.pageOrderNumber() < $1.pageOrderNumber() })
         
         // Initialization of ViewControllers or these pages
@@ -51,7 +51,7 @@ class TabCoordinator: NSObject, Coordinator {
         /// Assign page's controllers
         tabBarController.setViewControllers(tabControllers, animated: true)
         /// Let set index
-        tabBarController.selectedIndex = TabBarPage.start.pageOrderNumber()
+        tabBarController.selectedIndex = TabBarPage.espresso.pageOrderNumber()
         /// Styling
         tabBarController.tabBar.isTranslucent = false
         
@@ -62,43 +62,42 @@ class TabCoordinator: NSObject, Coordinator {
     private func getTabController(_ page: TabBarPage) -> UINavigationController {
         let navController = UINavigationController()
         navController.setNavigationBarHidden(false, animated: false)
-        
         navController.tabBarItem = UITabBarItem.init(title: page.pageTitleValue(),
                                                      image: nil,
                                                      tag: page.pageOrderNumber())
         
         
         switch page {
-        case .start:
+        case .espresso:
             // If needed: Each tab bar flow can have it's own Coordinator.
-            let startVC = StartViewController()
-            startVC.didSendEventClosure = { [weak self] event in
+            let espressoVC = EspressoViewController()
+            espressoVC.didSendEventClosure = { [weak self] event in
                 switch event {
-                case .start:
-                    self?.selectPage(.enterValue)
+                case .espresso:
+                    self?.selectPage(.latte)
                 }
             }
-            navController.pushViewController(startVC, animated: true)
+            navController.pushViewController(espressoVC, animated: true)
 
-        case .enterValue:
-            let enterValueVC = EnterValueViewController()
-            enterValueVC.didSendEventClosure = { [weak self] event in
+        case .latte:
+            let latteVC = LatteViewController()
+            latteVC.didSendEventClosure = { [weak self] event in
                 switch event {
-                case .enterValue:
-                    self?.selectPage(.instruction)
+                case .latte:
+                    self?.selectPage(.raf)
                 }
             }
-            navController.pushViewController(enterValueVC, animated: true)
+            navController.pushViewController(latteVC, animated: true)
 
-        case .instruction:
-            let instructionVC = InstructionViewController()
-            instructionVC.didSendEventClosure = { [weak self] event in
+        case .raf:
+            let rafVC = RafViewController()
+            rafVC.didSendEventClosure = { [weak self] event in
                 switch event {
-                case .instruction:
+                case .raf:
                     self?.finish()
                 }
             }
-            navController.pushViewController(instructionVC, animated: true)
+            navController.pushViewController(rafVC, animated: true)
         }
         
         return navController
