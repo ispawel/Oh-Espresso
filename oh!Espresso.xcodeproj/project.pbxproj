@@ -7,23 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EE0EA6FFB1B70B65EBDF7E1 /* Pods_oh_Espresso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144708E5D8EFDA44321586E4 /* Pods_oh_Espresso.framework */; };
 		E232651129ED5D8100BB1CA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232651029ED5D8100BB1CA1 /* AppDelegate.swift */; };
-		E232651329ED5D8100BB1CA1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232651229ED5D8100BB1CA1 /* SceneDelegate.swift */; };
-		E232651529ED5D8100BB1CA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232651429ED5D8100BB1CA1 /* ViewController.swift */; };
-		E232651829ED5D8100BB1CA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E232651629ED5D8100BB1CA1 /* Main.storyboard */; };
 		E232651A29ED5D8300BB1CA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E232651929ED5D8200BB1CA1 /* Assets.xcassets */; };
 		E232651D29ED5D8300BB1CA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E232651B29ED5D8300BB1CA1 /* LaunchScreen.storyboard */; };
+		E232652529ED5E8F00BB1CA1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232652429ED5E8F00BB1CA1 /* AppCoordinator.swift */; };
+		E232658C29ED623A00BB1CA1 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232657729ED623A00BB1CA1 /* TabBarCoordinator.swift */; };
+		E232658D29ED623A00BB1CA1 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232657829ED623A00BB1CA1 /* TabBarPage.swift */; };
+		E232659229ED623A00BB1CA1 /* EnterValueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232658029ED623A00BB1CA1 /* EnterValueViewController.swift */; };
+		E232659329ED623A00BB1CA1 /* EnterValueCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232658129ED623A00BB1CA1 /* EnterValueCoordinator.swift */; };
+		E232659429ED623A00BB1CA1 /* EnterValuePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232658229ED623A00BB1CA1 /* EnterValuePageViewModel.swift */; };
+		E232659529ED623A00BB1CA1 /* EnterValuePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232658329ED623A00BB1CA1 /* EnterValuePageView.swift */; };
+		E232659629ED623A00BB1CA1 /* InstructionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232658529ED623A00BB1CA1 /* InstructionCoordinator.swift */; };
+		E232659729ED623A00BB1CA1 /* InstructionPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232658629ED623A00BB1CA1 /* InstructionPageView.swift */; };
+		E232659829ED623A00BB1CA1 /* InstructionPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232658729ED623A00BB1CA1 /* InstructionPageViewController.swift */; };
+		E232659929ED623A00BB1CA1 /* InstructionPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232658829ED623A00BB1CA1 /* InstructionPageViewModel.swift */; };
+		E232659A29ED623A00BB1CA1 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232658A29ED623A00BB1CA1 /* LoginCoordinator.swift */; };
+		E232659B29ED623A00BB1CA1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232658B29ED623A00BB1CA1 /* LoginViewController.swift */; };
+		E232659D29ED648000BB1CA1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232659C29ED648000BB1CA1 /* Coordinator.swift */; };
+		E23265A529ED667700BB1CA1 /* StartPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23265A129ED667700BB1CA1 /* StartPageViewModel.swift */; };
+		E23265A629ED667700BB1CA1 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23265A229ED667700BB1CA1 /* StartCoordinator.swift */; };
+		E23265A729ED667700BB1CA1 /* StartPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23265A329ED667700BB1CA1 /* StartPageView.swift */; };
+		E23265A829ED667700BB1CA1 /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23265A429ED667700BB1CA1 /* StartPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		144708E5D8EFDA44321586E4 /* Pods_oh_Espresso.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oh_Espresso.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F84EF178CB774043C566EB /* Pods-oh!Espresso.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oh!Espresso.debug.xcconfig"; path = "Target Support Files/Pods-oh!Espresso/Pods-oh!Espresso.debug.xcconfig"; sourceTree = "<group>"; };
+		CA44850071A2C303B29FC313 /* Pods-oh!Espresso.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oh!Espresso.release.xcconfig"; path = "Target Support Files/Pods-oh!Espresso/Pods-oh!Espresso.release.xcconfig"; sourceTree = "<group>"; };
 		E232650D29ED5D8100BB1CA1 /* oh!Espresso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "oh!Espresso.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E232651029ED5D8100BB1CA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E232651229ED5D8100BB1CA1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E232651429ED5D8100BB1CA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E232651729ED5D8100BB1CA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E232651929ED5D8200BB1CA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E232651C29ED5D8300BB1CA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E232651E29ED5D8300BB1CA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E232652429ED5E8F00BB1CA1 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		E232657729ED623A00BB1CA1 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		E232657829ED623A00BB1CA1 /* TabBarPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
+		E232658029ED623A00BB1CA1 /* EnterValueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterValueViewController.swift; sourceTree = "<group>"; };
+		E232658129ED623A00BB1CA1 /* EnterValueCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterValueCoordinator.swift; sourceTree = "<group>"; };
+		E232658229ED623A00BB1CA1 /* EnterValuePageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterValuePageViewModel.swift; sourceTree = "<group>"; };
+		E232658329ED623A00BB1CA1 /* EnterValuePageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnterValuePageView.swift; sourceTree = "<group>"; };
+		E232658529ED623A00BB1CA1 /* InstructionCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionCoordinator.swift; sourceTree = "<group>"; };
+		E232658629ED623A00BB1CA1 /* InstructionPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionPageView.swift; sourceTree = "<group>"; };
+		E232658729ED623A00BB1CA1 /* InstructionPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionPageViewController.swift; sourceTree = "<group>"; };
+		E232658829ED623A00BB1CA1 /* InstructionPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionPageViewModel.swift; sourceTree = "<group>"; };
+		E232658A29ED623A00BB1CA1 /* LoginCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		E232658B29ED623A00BB1CA1 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E232659C29ED648000BB1CA1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		E23265A129ED667700BB1CA1 /* StartPageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageViewModel.swift; sourceTree = "<group>"; };
+		E23265A229ED667700BB1CA1 /* StartCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
+		E23265A329ED667700BB1CA1 /* StartPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageView.swift; sourceTree = "<group>"; };
+		E23265A429ED667700BB1CA1 /* StartPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +65,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE0EA6FFB1B70B65EBDF7E1 /* Pods_oh_Espresso.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FBB25B300B182DC58BD5D00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				144708E5D8EFDA44321586E4 /* Pods_oh_Espresso.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		947AABD7A07094AD994A6810 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84F84EF178CB774043C566EB /* Pods-oh!Espresso.debug.xcconfig */,
+				CA44850071A2C303B29FC313 /* Pods-oh!Espresso.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E232650429ED5D8100BB1CA1 = {
 			isa = PBXGroup;
 			children = (
 				E232650F29ED5D8100BB1CA1 /* oh!Espresso */,
 				E232650E29ED5D8100BB1CA1 /* Products */,
+				947AABD7A07094AD994A6810 /* Pods */,
+				0FBB25B300B182DC58BD5D00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +111,87 @@
 		E232650F29ED5D8100BB1CA1 /* oh!Espresso */ = {
 			isa = PBXGroup;
 			children = (
-				E232651029ED5D8100BB1CA1 /* AppDelegate.swift */,
-				E232651229ED5D8100BB1CA1 /* SceneDelegate.swift */,
-				E232651429ED5D8100BB1CA1 /* ViewController.swift */,
-				E232651629ED5D8100BB1CA1 /* Main.storyboard */,
+				E232654929ED5F3A00BB1CA1 /* Application */,
+				E232657629ED623A00BB1CA1 /* Scenes */,
 				E232651929ED5D8200BB1CA1 /* Assets.xcassets */,
 				E232651B29ED5D8300BB1CA1 /* LaunchScreen.storyboard */,
 				E232651E29ED5D8300BB1CA1 /* Info.plist */,
 			);
 			path = "oh!Espresso";
+			sourceTree = "<group>";
+		};
+		E232654929ED5F3A00BB1CA1 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E232651029ED5D8100BB1CA1 /* AppDelegate.swift */,
+				E232652429ED5E8F00BB1CA1 /* AppCoordinator.swift */,
+				E232659C29ED648000BB1CA1 /* Coordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E232657629ED623A00BB1CA1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				E232657729ED623A00BB1CA1 /* TabBarCoordinator.swift */,
+				E232657829ED623A00BB1CA1 /* TabBarPage.swift */,
+				E232658929ED623A00BB1CA1 /* Login */,
+				E232657929ED623A00BB1CA1 /* Main */,
+			);
+			name = Scenes;
+			path = "oh!Espresso/Scenes";
+			sourceTree = SOURCE_ROOT;
+		};
+		E232657929ED623A00BB1CA1 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				E23265A029ED665700BB1CA1 /* Start */,
+				E232657F29ED623A00BB1CA1 /* EnterValue */,
+				E232658429ED623A00BB1CA1 /* Instruction */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		E232657F29ED623A00BB1CA1 /* EnterValue */ = {
+			isa = PBXGroup;
+			children = (
+				E232658029ED623A00BB1CA1 /* EnterValueViewController.swift */,
+				E232658129ED623A00BB1CA1 /* EnterValueCoordinator.swift */,
+				E232658229ED623A00BB1CA1 /* EnterValuePageViewModel.swift */,
+				E232658329ED623A00BB1CA1 /* EnterValuePageView.swift */,
+			);
+			path = EnterValue;
+			sourceTree = "<group>";
+		};
+		E232658429ED623A00BB1CA1 /* Instruction */ = {
+			isa = PBXGroup;
+			children = (
+				E232658529ED623A00BB1CA1 /* InstructionCoordinator.swift */,
+				E232658629ED623A00BB1CA1 /* InstructionPageView.swift */,
+				E232658729ED623A00BB1CA1 /* InstructionPageViewController.swift */,
+				E232658829ED623A00BB1CA1 /* InstructionPageViewModel.swift */,
+			);
+			path = Instruction;
+			sourceTree = "<group>";
+		};
+		E232658929ED623A00BB1CA1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E232658A29ED623A00BB1CA1 /* LoginCoordinator.swift */,
+				E232658B29ED623A00BB1CA1 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E23265A029ED665700BB1CA1 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				E23265A229ED667700BB1CA1 /* StartCoordinator.swift */,
+				E23265A429ED667700BB1CA1 /* StartPageViewController.swift */,
+				E23265A329ED667700BB1CA1 /* StartPageView.swift */,
+				E23265A129ED667700BB1CA1 /* StartPageViewModel.swift */,
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E232652129ED5D8300BB1CA1 /* Build configuration list for PBXNativeTarget "oh!Espresso" */;
 			buildPhases = (
+				AC15F71F8260A31058EBA3F6 /* [CP] Check Pods Manifest.lock */,
 				E232650929ED5D8100BB1CA1 /* Sources */,
 				E232650A29ED5D8100BB1CA1 /* Frameworks */,
 				E232650B29ED5D8100BB1CA1 /* Resources */,
+				5D3DCC57C4974FBB09D9A550 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +256,83 @@
 			files = (
 				E232651D29ED5D8300BB1CA1 /* LaunchScreen.storyboard in Resources */,
 				E232651A29ED5D8300BB1CA1 /* Assets.xcassets in Resources */,
-				E232651829ED5D8100BB1CA1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D3DCC57C4974FBB09D9A550 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-oh!Espresso/Pods-oh!Espresso-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-oh!Espresso/Pods-oh!Espresso-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-oh!Espresso/Pods-oh!Espresso-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC15F71F8260A31058EBA3F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-oh!Espresso-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E232650929ED5D8100BB1CA1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E232651529ED5D8100BB1CA1 /* ViewController.swift in Sources */,
+				E232659B29ED623A00BB1CA1 /* LoginViewController.swift in Sources */,
+				E232659A29ED623A00BB1CA1 /* LoginCoordinator.swift in Sources */,
+				E232659229ED623A00BB1CA1 /* EnterValueViewController.swift in Sources */,
+				E23265A629ED667700BB1CA1 /* StartCoordinator.swift in Sources */,
+				E232659629ED623A00BB1CA1 /* InstructionCoordinator.swift in Sources */,
+				E232659D29ED648000BB1CA1 /* Coordinator.swift in Sources */,
+				E232659929ED623A00BB1CA1 /* InstructionPageViewModel.swift in Sources */,
+				E232658D29ED623A00BB1CA1 /* TabBarPage.swift in Sources */,
+				E232652529ED5E8F00BB1CA1 /* AppCoordinator.swift in Sources */,
 				E232651129ED5D8100BB1CA1 /* AppDelegate.swift in Sources */,
-				E232651329ED5D8100BB1CA1 /* SceneDelegate.swift in Sources */,
+				E232659429ED623A00BB1CA1 /* EnterValuePageViewModel.swift in Sources */,
+				E23265A529ED667700BB1CA1 /* StartPageViewModel.swift in Sources */,
+				E23265A729ED667700BB1CA1 /* StartPageView.swift in Sources */,
+				E232659829ED623A00BB1CA1 /* InstructionPageViewController.swift in Sources */,
+				E232659729ED623A00BB1CA1 /* InstructionPageView.swift in Sources */,
+				E232658C29ED623A00BB1CA1 /* TabBarCoordinator.swift in Sources */,
+				E23265A829ED667700BB1CA1 /* StartPageViewController.swift in Sources */,
+				E232659529ED623A00BB1CA1 /* EnterValuePageView.swift in Sources */,
+				E232659329ED623A00BB1CA1 /* EnterValueCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E232651629ED5D8100BB1CA1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E232651729ED5D8100BB1CA1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E232651B29ED5D8300BB1CA1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +460,7 @@
 		};
 		E232652229ED5D8300BB1CA1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84F84EF178CB774043C566EB /* Pods-oh!Espresso.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,11 +469,12 @@
 				DEVELOPMENT_TEAM = V75UZGB9LL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "oh!Espresso/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,14 +482,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.home.oh-Espresso";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		E232652329ED5D8300BB1CA1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA44850071A2C303B29FC313 /* Pods-oh!Espresso.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,11 +502,12 @@
 				DEVELOPMENT_TEAM = V75UZGB9LL;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "oh!Espresso/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +515,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.home.oh-Espresso";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
