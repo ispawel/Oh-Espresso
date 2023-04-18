@@ -5,12 +5,11 @@
 //  Created by Pavel Isakov on 09.04.2023.
 //
 
-import Foundation
 
-class EspressoViewModel {
+
+// MARK: - ViewModel
+class EspressoViewViewModel {
     
     weak var coordinator: AppCoordinator!
-    
-    // MARK: - Methods
     
 }

@@ -135,8 +135,7 @@
 		E232657629ED623A00BB1CA1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				E232657729ED623A00BB1CA1 /* TabBarCoordinator.swift */,
-				E232657829ED623A00BB1CA1 /* TabBarPage.swift */,
+				E2D766C329EE6F80009F80EA /* TabBar */,
 				E232658929ED623A00BB1CA1 /* Login */,
 				E232657929ED623A00BB1CA1 /* Main */,
 			);
@@ -157,8 +156,8 @@
 		E232657F29ED623A00BB1CA1 /* Latte */ = {
 			isa = PBXGroup;
 			children = (
-				E232658029ED623A00BB1CA1 /* LatteViewController.swift */,
 				E232658129ED623A00BB1CA1 /* LatteCoordinator.swift */,
+				E232658029ED623A00BB1CA1 /* LatteViewController.swift */,
 				E232658229ED623A00BB1CA1 /* LatteViewModel.swift */,
 				E232658329ED623A00BB1CA1 /* LatteView.swift */,
 			);
@@ -202,6 +201,15 @@
 				E23265AB29ED83AF00BB1CA1 /* UIColor+Font.swift */,
 			);
 			path = Appearance;
+			sourceTree = "<group>";
+		};
+		E2D766C329EE6F80009F80EA /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E232657729ED623A00BB1CA1 /* TabBarCoordinator.swift */,
+				E232657829ED623A00BB1CA1 /* TabBarPage.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

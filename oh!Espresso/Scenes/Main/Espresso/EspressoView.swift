@@ -9,6 +9,4 @@ import UIKit
 
 class EspressoView: UIView {
     
-    // MARK: - Subviews
-    // MARK: - Containers
 }
