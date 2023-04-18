@@ -17,7 +17,6 @@ class EspressoViewController: UIViewController {
     var didSendEventClosure: ((EspressoViewController.Event) -> Void)?
 
     
-    
     // MARK: - Methods
     private func setupView() {
     }
@@ -35,9 +34,9 @@ class EspressoViewController: UIViewController {
 
     private let coffeValueLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "title", size: 13)
+        label.font = UIFont(name: "title", size: 11)
         label.text = "Обьем молотого кофе"
-        label.width(150)
+        //label.width(200)
         label.height(30)
         label.layer.cornerRadius = 10
         return label
@@ -47,8 +46,8 @@ class EspressoViewController: UIViewController {
         let textField = UITextField()
         textField.placeholder("18")
         textField.textAlignment = .center
-        textField.backgroundColor = .systemBlue
-        textField.width(150)
+        //textField.backgroundColor =
+        textField.width(70)
         textField.height(30)
         textField.layer.cornerRadius = 10
         return textField
@@ -56,9 +55,9 @@ class EspressoViewController: UIViewController {
 
     private let brewRatioLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "title1", size: 13)
+        label.font = UIFont(name: "title1", size: 11)
         label.text = "Коэфициент"
-        label.width(150)
+        //label.width(170)
         label.height(30)
         label.layer.cornerRadius = 10
         return label
@@ -68,8 +67,8 @@ class EspressoViewController: UIViewController {
         let textField = UITextField()
         textField.placeholder("2.0")
         textField.textAlignment = .center
-        textField.backgroundColor = .systemBlue
-        textField.width(150)
+        //textField.backgroundColor =
+        textField.width(70)
         textField.height(30)
         textField.layer.cornerRadius = 10
         return textField
@@ -77,21 +76,32 @@ class EspressoViewController: UIViewController {
 
     private let calcButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Calc", for: .normal)
         button.backgroundColor = .systemBlue
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 10
         button.width(120)
         button.height(35)
-        button.addTarget(EspressoViewController.self, action: #selector(didTapCalcButton(_:)), for: .touchUpInside)
+//      button.addTarget(EspressoViewController.self, action: #selector(didTapCalcButton(_:)), for: .touchUpInside)
         return button
     }()
 
-    private let resultLabel: UILabel = {
+    private let resultValueEspressoLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "title", size: 13)
+        label.font = UIFont(name: "title", size: 11)
         label.textAlignment = .center
         label.text = "0"
+        label.width(150)
+        label.height(30)
+        label.layer.cornerRadius = 10
+        return label
+    }()
+    
+    private let resultTimeEspressoLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "title", size: 11)
+        label.textAlignment = .center
+        label.text = "25-30 Секунд"
         label.width(150)
         label.height(30)
         label.layer.cornerRadius = 10
@@ -112,18 +122,14 @@ class EspressoViewController: UIViewController {
     private let coffeHorizontalStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.alignment = .center
-        stackView.distribution = .equalSpacing
-        stackView.spacing = 10
+        stackView.distribution = .equalCentering
         return stackView
     }()
 
     private let brewRatioHorizontalStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.alignment = .center
         stackView.distribution = .equalSpacing
-        stackView.spacing = 15
         return stackView
     }()
 
@@ -132,7 +138,6 @@ class EspressoViewController: UIViewController {
         stackView.axis = .vertical
         stackView.alignment = .center
         stackView.distribution = .equalSpacing
-        stackView.spacing = 20
         return stackView
     }()
     
@@ -140,14 +145,12 @@ class EspressoViewController: UIViewController {
         super.viewDidLoad()
         
         // Setup
-        view.backgroundColor = .darkGray
-        mainView.backgroundColor = .systemGray3
-        mainVericalStackView.backgroundColor = .systemGray4
-        coffeHorizontalStackView.backgroundColor = .systemGray5
-        resultVerticalStackView.backgroundColor = .systemGray5
-        brewRatioHorizontalStackView.backgroundColor = .systemGray5
+        mainView.backgroundColor = UIColor(red:59/255.0, green:67/255.0, blue:78/255.0, alpha:1.0)
+        mainVericalStackView.backgroundColor = UIColor(red:54/255.0, green:63/255.0, blue:78/255.0, alpha:1.0)
+        coffeHorizontalStackView.backgroundColor = .systemGray4
+        resultVerticalStackView.backgroundColor = .systemGray4
+        brewRatioHorizontalStackView.backgroundColor = .systemGray4
 
-        
         // Subviews
         mainVericalStackView.addArrangedSubview(coffeHorizontalStackView)
         coffeHorizontalStackView.addArrangedSubview(coffeValueLabel)
@@ -158,7 +161,8 @@ class EspressoViewController: UIViewController {
         brewRatioHorizontalStackView.addArrangedSubview(brewRatioTF)
         
         mainVericalStackView.addArrangedSubview(resultVerticalStackView)
-        resultVerticalStackView.addArrangedSubview(resultLabel)
+        resultVerticalStackView.addArrangedSubview(resultValueEspressoLabel)
+        resultVerticalStackView.addArrangedSubview(resultTimeEspressoLabel)
         resultVerticalStackView.addArrangedSubview(calcButton)
 
         
@@ -170,9 +174,9 @@ class EspressoViewController: UIViewController {
         
         // layout
         mainView.fillContainer()
-        mainVericalStackView.top(150)
-        mainVericalStackView.bottom(70)
-        mainVericalStackView.fillHorizontally(padding: 10)
+        mainVericalStackView.top(450)
+        mainVericalStackView.bottom(20)
+        mainVericalStackView.fillHorizontally(padding: 40)
         
     }
 
