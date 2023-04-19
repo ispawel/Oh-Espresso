@@ -7,6 +7,6 @@
 
 import UIKit
 
-class InstructionPageView: UIView {
+class RafView: UIView {
     
 }

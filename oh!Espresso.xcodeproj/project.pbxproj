@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3EE0EA6FFB1B70B65EBDF7E1 /* Pods_oh_Espresso.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 144708E5D8EFDA44321586E4 /* Pods_oh_Espresso.framework */; };
+		E2119B7A29EFEDB4009977BE /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2119B7929EFEDB4009977BE /* UIColors.swift */; };
 		E232651129ED5D8100BB1CA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E232651029ED5D8100BB1CA1 /* AppDelegate.swift */; };
 		E232651A29ED5D8300BB1CA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E232651929ED5D8200BB1CA1 /* Assets.xcassets */; };
 		E232651D29ED5D8300BB1CA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E232651B29ED5D8300BB1CA1 /* LaunchScreen.storyboard */; };
@@ -36,6 +37,7 @@
 		144708E5D8EFDA44321586E4 /* Pods_oh_Espresso.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_oh_Espresso.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F84EF178CB774043C566EB /* Pods-oh!Espresso.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oh!Espresso.debug.xcconfig"; path = "Target Support Files/Pods-oh!Espresso/Pods-oh!Espresso.debug.xcconfig"; sourceTree = "<group>"; };
 		CA44850071A2C303B29FC313 /* Pods-oh!Espresso.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-oh!Espresso.release.xcconfig"; path = "Target Support Files/Pods-oh!Espresso/Pods-oh!Espresso.release.xcconfig"; sourceTree = "<group>"; };
+		E2119B7929EFEDB4009977BE /* UIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
 		E232650D29ED5D8100BB1CA1 /* oh!Espresso.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "oh!Espresso.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E232651029ED5D8100BB1CA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E232651929ED5D8200BB1CA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				E232657629ED623A00BB1CA1 /* Scenes */,
 				E232651929ED5D8200BB1CA1 /* Assets.xcassets */,
 				E232651B29ED5D8300BB1CA1 /* LaunchScreen.storyboard */,
+				E2119B7929EFEDB4009977BE /* UIColors.swift */,
 				E232651E29ED5D8300BB1CA1 /* Info.plist */,
 			);
 			path = "oh!Espresso";
@@ -343,6 +346,7 @@
 				E232659829ED623A00BB1CA1 /* RafViewController.swift in Sources */,
 				E232659729ED623A00BB1CA1 /* RafView.swift in Sources */,
 				E232658C29ED623A00BB1CA1 /* TabBarCoordinator.swift in Sources */,
+				E2119B7A29EFEDB4009977BE /* UIColors.swift in Sources */,
 				E23265A829ED667700BB1CA1 /* EspresspViewController.swift in Sources */,
 				E232659529ED623A00BB1CA1 /* LatteView.swift in Sources */,
 				E232659329ED623A00BB1CA1 /* LatteCoordinator.swift in Sources */,

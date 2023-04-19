@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import Stevia
 
 class EspressoViewController: UIViewController {
 
     // MARK: - Input
     private let ui = EspressoView()
-
+    let uiColor = UIColors()
     
     // MARK: - Output
     var didSendEventClosure: ((EspressoViewController.Event) -> Void)?
@@ -22,8 +23,8 @@ class EspressoViewController: UIViewController {
     }
     
     private func updateView() {
-        
     }
+    
     
     
     //MARK: - Subviews
@@ -36,7 +37,6 @@ class EspressoViewController: UIViewController {
         let label = UILabel()
         label.font = UIFont(name: "title", size: 11)
         label.text = "Обьем молотого кофе"
-        //label.width(200)
         label.height(30)
         label.layer.cornerRadius = 10
         return label
@@ -46,7 +46,6 @@ class EspressoViewController: UIViewController {
         let textField = UITextField()
         textField.placeholder("18")
         textField.textAlignment = .center
-        //textField.backgroundColor =
         textField.width(70)
         textField.height(30)
         textField.layer.cornerRadius = 10
@@ -57,7 +56,6 @@ class EspressoViewController: UIViewController {
         let label = UILabel()
         label.font = UIFont(name: "title1", size: 11)
         label.text = "Коэфициент"
-        //label.width(170)
         label.height(30)
         label.layer.cornerRadius = 10
         return label
@@ -67,7 +65,6 @@ class EspressoViewController: UIViewController {
         let textField = UITextField()
         textField.placeholder("2.0")
         textField.textAlignment = .center
-        //textField.backgroundColor =
         textField.width(70)
         textField.height(30)
         textField.layer.cornerRadius = 10
@@ -141,15 +138,20 @@ class EspressoViewController: UIViewController {
         return stackView
     }()
     
+    
+    
+    //MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Setup
-        mainView.backgroundColor = UIColor(red:59/255.0, green:67/255.0, blue:78/255.0, alpha:1.0)
-        mainVericalStackView.backgroundColor = UIColor(red:54/255.0, green:63/255.0, blue:78/255.0, alpha:1.0)
-        coffeHorizontalStackView.backgroundColor = .systemGray4
-        resultVerticalStackView.backgroundColor = .systemGray4
-        brewRatioHorizontalStackView.backgroundColor = .systemGray4
+        uiColor.gradient.frame = view.bounds
+        view.layer.addSublayer(uiColor.gradient)
+        //mainView.backgroundColor = .white
+//        mainVericalStackView.backgroundColor = .systemGray3
+//        coffeHorizontalStackView.backgroundColor = .systemGray4
+//        resultVerticalStackView.backgroundColor = .systemGray4
+//        brewRatioHorizontalStackView.backgroundColor = .systemGray4
 
         // Subviews
         mainVericalStackView.addArrangedSubview(coffeHorizontalStackView)

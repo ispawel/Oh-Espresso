@@ -10,8 +10,21 @@ import Stevia
 
 class LatteViewController: UIViewController {
 
+    // MARK: - Input
+    private let ui = LatteView()
+    let uiColors = UIColors()
+
+    // MARK: - Output
     var didSendEventClosure: ((LatteViewController.Event) -> Void)?
 
+    // MARK: - Methods
+    private func setupView() {
+    }
+    
+    private func updateView() {
+    }
+    
+    
     
     //MARK: - Subviews
     private let mainView: UIView = {
@@ -21,9 +34,8 @@ class LatteViewController: UIViewController {
 
     private let espressoValueLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "title", size: 12)
+        label.font = UIFont(name: "title", size: 11)
         label.text = "Обьем эспрессо"
-        label.width(150)
         label.height(30)
         label.layer.cornerRadius = 10
         return label
@@ -31,10 +43,10 @@ class LatteViewController: UIViewController {
 
     private let espressoValueTF: UITextField = {
         let textField = UITextField()
+        textField.font = UIFont(name: "title1", size: 11)
         textField.placeholder("36")
         textField.textAlignment = .center
-        textField.backgroundColor = .systemBlue
-        textField.width(150)
+        textField.width(70)
         textField.height(30)
         textField.layer.cornerRadius = 10
         return textField
@@ -42,9 +54,8 @@ class LatteViewController: UIViewController {
 
     private let valueMilkLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "title1", size: 12)
+        label.font = UIFont(name: "title1", size: 11)
         label.text = "Обьем молока"
-        label.width(150)
         label.height(30)
         label.layer.cornerRadius = 10
         return label
@@ -52,9 +63,9 @@ class LatteViewController: UIViewController {
 
     private let valueMilkTF: UITextField = {
         let textField = UITextField()
+        textField.font = UIFont(name: "title1", size: 11)
         textField.placeholder("7 частей")
         textField.textAlignment = .center
-        textField.backgroundColor = .systemBlue
         textField.width(150)
         textField.height(30)
         textField.layer.cornerRadius = 10
@@ -73,12 +84,21 @@ class LatteViewController: UIViewController {
         return button
     }()
 
-    private let resultLabel: UILabel = {
+    private let resultMilkLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "title", size: 12)
+        label.font = UIFont(name: "title", size: 11)
         label.textAlignment = .center
-        label.text = "230 мл"
-        label.width(150)
+        label.text = "\(200) мл"
+        label.height(30)
+        label.layer.cornerRadius = 10
+        return label
+    }()
+    
+    private let resultLatteLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "title", size: 11)
+        label.textAlignment = .center
+        label.text = "\(230) мл"
         label.height(30)
         label.layer.cornerRadius = 10
         return label
@@ -98,9 +118,9 @@ class LatteViewController: UIViewController {
     private let espressoHorizontalStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.alignment = .center
+        stackView.alignment = .fill
         stackView.distribution = .equalSpacing
-        stackView.spacing = 10
+        //stackView.spacing = 10
         return stackView
     }()
 
@@ -109,7 +129,7 @@ class LatteViewController: UIViewController {
         stackView.axis = .horizontal
         stackView.alignment = .center
         stackView.distribution = .equalSpacing
-        stackView.spacing = 15
+        //stackView.spacing = 15
         return stackView
     }()
 
@@ -122,16 +142,20 @@ class LatteViewController: UIViewController {
         return stackView
     }()
     
+    
+    //MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Setup
-        view.backgroundColor = .darkGray
-        mainView.backgroundColor = .systemGray3
-        mainVericalStackView.backgroundColor = .systemGray4
-        espressoHorizontalStackView.backgroundColor = .systemGray5
-        milkHorizontalStackView.backgroundColor = .systemGray5
-        resultVerticalStackView.backgroundColor = .systemGray5
+        uiColors.gradient.frame = view.bounds
+        view.layer.addSublayer(uiColors.gradient)
+        
+//        mainView.backgroundColor = .white
+//        mainVericalStackView.backgroundColor = .systemGray3
+//        espressoHorizontalStackView.backgroundColor = .systemGray4
+//        milkHorizontalStackView.backgroundColor = .systemGray4
+//        resultVerticalStackView.backgroundColor = .systemGray4
 
         
         // Subviews
@@ -144,8 +168,9 @@ class LatteViewController: UIViewController {
         milkHorizontalStackView.addArrangedSubview(valueMilkTF)
         
         mainVericalStackView.addArrangedSubview(resultVerticalStackView)
-         resultVerticalStackView.addArrangedSubview(resultLabel)
-         resultVerticalStackView.addArrangedSubview(calcButton)
+        resultVerticalStackView.addArrangedSubview(resultMilkLabel)
+        resultVerticalStackView.addArrangedSubview(resultLatteLabel)
+        resultVerticalStackView.addArrangedSubview(calcButton)
 
         
         view.subviews(
@@ -156,9 +181,9 @@ class LatteViewController: UIViewController {
         
         // layout
         mainView.fillContainer()
-        mainVericalStackView.top(150)
-        mainVericalStackView.bottom(70)
-        mainVericalStackView.fillHorizontally(padding: 10)
+        mainVericalStackView.top(450)
+        mainVericalStackView.bottom(20)
+        mainVericalStackView.fillHorizontally(padding: 40)
         
     }
 

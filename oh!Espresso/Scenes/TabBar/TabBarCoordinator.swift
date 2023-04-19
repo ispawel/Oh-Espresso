@@ -46,15 +46,21 @@ class TabCoordinator: NSObject, Coordinator {
     }
     
     private func prepareTabBarController(withTabControllers tabControllers: [UIViewController]) {
+        
         /// Set delegate for UITabBarController
         tabBarController.delegate = self
+       
         /// Assign page's controllers
         tabBarController.setViewControllers(tabControllers, animated: true)
+       
         /// Let set index
         tabBarController.selectedIndex = TabBarPage.espresso.pageOrderNumber()
+       
         /// Styling
         tabBarController.tabBar.isTranslucent = false
-        
+        tabBarController.tabBar.backgroundColor = .darkGray
+        tabBarController.tabBar.tintColor = .white
+
         /// In this step, we attach tabBarController to navigation controller associated with this coordanator
         navigationController.viewControllers = [tabBarController]
     }
