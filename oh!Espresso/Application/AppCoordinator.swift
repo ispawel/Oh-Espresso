@@ -9,7 +9,7 @@ import UIKit
 
 // Define what type of flows can be started from this Coordinator
 protocol AppCoordinatorProtocol: Coordinator {
-    func showLoginFlow()
+    func showListCoffeFlow()
     func showMainFlow()
 }
 
@@ -27,16 +27,16 @@ class AppCoordinator: AppCoordinatorProtocol {
     }
 
     func start() {
-        //showLoginFlow()
-        showMainFlow()
+        showListCoffeFlow()
+        //showMainFlow()
     }
         
-    func showLoginFlow() {
-        // Implementation of Login FLow
-        let loginCoordinator = LoginCoordinator.init(navigationController)
-        loginCoordinator.finishDelegate = self
-        loginCoordinator.start()
-        childCoordinators.append(loginCoordinator)
+    func showListCoffeFlow() {
+        // Implementation of List Coffe FLow
+        let listCoffeCoordinator = ListCoffeCoordinator.init(navigationController)
+        listCoffeCoordinator.finishDelegate = self
+        listCoffeCoordinator.start()
+        childCoordinators.append(listCoffeCoordinator)
     }
     
     func showMainFlow() {
@@ -58,9 +58,9 @@ extension AppCoordinator: CoordinatorFinishDelegate {
             
         case .tab:
             navigationController.viewControllers.removeAll()
-            showLoginFlow()
+            showListCoffeFlow()
             
-        case .login:
+        case .listCoffe:
             navigationController.viewControllers.removeAll()
             showMainFlow()
             

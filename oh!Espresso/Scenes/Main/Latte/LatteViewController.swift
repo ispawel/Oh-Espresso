@@ -11,12 +11,12 @@ import Stevia
 class LatteViewController: UIViewController {
 
     // MARK: - Input
-    private let ui = LatteView()
     let uiColors = UIColors()
 
     // MARK: - Output
-    var didSendEventClosure: ((LatteViewController.Event) -> Void)?
+     var didSendEventClosure: ((LatteViewController.Event) -> Void)?
 
+    
     // MARK: - Methods
     private func setupView() {
     }
@@ -189,7 +189,7 @@ class LatteViewController: UIViewController {
 
 
     @objc private func didTapToInstructionButton(_ sender: Any) {
-        didSendEventClosure?(.latte)
+       // didSendEventClosure?(.latte)
     }
 }
 

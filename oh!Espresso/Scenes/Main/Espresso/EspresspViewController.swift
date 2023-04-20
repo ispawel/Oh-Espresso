@@ -11,8 +11,7 @@ import Stevia
 class EspressoViewController: UIViewController {
 
     // MARK: - Input
-    private let ui = EspressoView()
-    let uiColor = UIColors()
+    private let uiColor = UIColors()
     
     // MARK: - Output
     var didSendEventClosure: ((EspressoViewController.Event) -> Void)?

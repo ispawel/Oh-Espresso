@@ -18,7 +18,7 @@ class EspressoCoordinator: EspressoCoordinatorProtocol {
     weak var finishDelegate: CoordinatorFinishDelegate?
     var navigationController: UINavigationController
     var childCoordinators: [Coordinator] = []
-    var type: CoordinatorType { .login }
+    var type: CoordinatorType { .listCoffe }
         
     required init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController

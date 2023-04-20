@@ -8,8 +8,7 @@
 
 
 // MARK: - ViewModel
-class EspressoViewViewModel {
+class EspressoViewModel {
     
-    weak var coordinator: AppCoordinator!
     
 }
