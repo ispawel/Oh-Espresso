@@ -18,8 +18,8 @@ class ListCoffeViewController: UIViewController {
     var didSendEventClosure: ((ListCoffeViewController.Event) -> Void)?
     
     // MARK: - Methods
-    let namesListCoffe: [String] = ["Espresso", "Cold Brew", "V60", "Latte", "Cappichino", "Raf", "Flat White", "Frappuchino"]
-    let volumeListCoffe: [Int] = [36, 100, 250, 230, 180, 250, 150, 250]
+    let namesListCoffe: [String] = ["Espresso", "Cold Brew", "V60", "Latte", "Cappichino", "Raf", "Flat White"]
+    let volumeListCoffe: [Int] = [36, 100, 250, 230, 180, 250, 150]
     
     
     func fillMainStack(){
@@ -43,9 +43,9 @@ class ListCoffeViewController: UIViewController {
                 let stackView = UIStackView()
                 stackView.layer.cornerRadius = 10
                 stackView.axis = .horizontal
-                stackView.spacing = 10
-                stackView.width(view.frame.width - 40)
-                stackView.height(70)
+                stackView.distribution = .fill
+                stackView.width(view.frame.width - 100)
+                stackView.height(90)
                 stackView.backgroundColor = UIColor(hue: 0.47, saturation: 0.07, brightness: 1.0, alpha: 0.4)
                 return stackView
             }()
@@ -75,9 +75,8 @@ class ListCoffeViewController: UIViewController {
     private let vStackMainView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.alignment = .center
-        stackView.distribution = .equalSpacing
-        stackView.spacing = 20
+        stackView.alignment = .fill
+        stackView.spacing = 10
         stackView.layer.cornerRadius = 10
         return stackView
     }()
@@ -103,11 +102,12 @@ class ListCoffeViewController: UIViewController {
         titleListCoffeLabel.centerHorizontally()
         fillMainStack()
         
-        scrollMainView.height(view.frame.height + 300)
-        scrollMainView.followEdges(view, top: 150, bottom: -50)
-        vStackMainView.followEdges(scrollMainView, top: 10, bottom: -10)
         
         // layout
+
+        scrollMainView.followEdges(view, top: 50, bottom: -50, leading: 20, trailing: -20)
+        vStackMainView.followEdges(scrollMainView, top: 10, bottom: -10, leading: 10, trailing: -10)
+        
         
     }
     
